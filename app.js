@@ -85,10 +85,12 @@ function removeTask (e){
 
 //defining the clearTasks function
 function clearTasks (){
+        if(confirm('Are you sure you want to clear the list?')){
         while(todoList.firstChild){
                 todoList.firstChild.remove('firstChild');
                 localStorage.clear();
         }
+}
 }
 
 //defining the filterTasks function
